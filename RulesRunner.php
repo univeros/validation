@@ -1,12 +1,13 @@
 <?php
 namespace Altair\Validation;
 
+use Altair\Middleware\Contracts\MiddlewareRunnerInterface;
 use Altair\Middleware\Contracts\PayloadInterface;
 use Altair\Structure\Queue;
 use Altair\Validation\Contracts\ResolverInterface;
 use Altair\Validation\Contracts\RuleInterface;
 
-class RulesRunner
+class RulesRunner implements MiddlewareRunnerInterface
 {
     /**
      * The middleware queue.
